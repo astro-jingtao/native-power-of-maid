@@ -48,7 +48,9 @@ public class MaidTickHandler {
 
     @SubscribeEvent
     public static void onMaidTickEvent(MaidTickEvent event) {
+        // TODO: 把这个事件分成两部分，一部分只在【拔刀剑攻击】下使用，一部分只要手持总是生效。
         EntityMaid maid = event.getMaid();
+        if (maid.getTask().getUid() != TaskSlashBlade.UID){return;}
         maid.getMainHandItem().getCapability(ItemSlashBlade.BLADESTATE)
                 .ifPresent(state -> handleMaidTick(maid, state));
     }
