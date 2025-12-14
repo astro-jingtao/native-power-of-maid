@@ -46,7 +46,7 @@
   "item.native_power_of_maid.soul_of_exp": "Soul of Maid - Experience",
   "item.native_power_of_maid.soul_of_exp.tooltips.1": "While attacking with SlashBlade, when blade breaks, the maid consumes her EXP to rapidly repair durability. Higher Favorability increases speed and reduces EXP cost.",
   "item.native_power_of_maid.soul_of_exp.tooltips.2": "Blade returns to undamaged state when fully repaired.",
-  "item.native_power_of_maid.soul_of_native_power": "ProudSoul of Maid - True POWER",
+  "item.native_power_of_maid.soul_of_native_power": "ProudSoul of Maid - Native POWER",
   "item.native_power_of_maid.soul_of_native_power.tooltips.1": "§b§o§lThis is POWER!§r",
   "item.native_power_of_maid.soul_of_native_power.tooltips.2": "§c§o§lRequires §e§o§lFavorability Lv3§e§o§l to activate.§r",
   "item.native_power_of_maid.soul_of_native_power.tooltips.3": "§dCan be combined with other §eSouls of Maid§r§d on an anvil (up to %1$s§r§d times; exceeding the limit will replace the earliest combined Soul of Maid)",
@@ -77,5 +77,5 @@
   "task.native_power_of_maid.slashblade_attack.condition.has_slashblade": "Mainhand holds a SlashBlade",
   "task.native_power_of_maid.slashblade_attack.condition.souls": "Equip special SlashBlade Baubles to unlock more skills",
   "jei.native_power_of_maid.altar_craft.item_craft.result": "Craft an Item",
-  "item_group.native_power_of_maid": "TLM: True POWER"
+  "item_group.native_power_of_maid": "TLM: Native POWER"
 }

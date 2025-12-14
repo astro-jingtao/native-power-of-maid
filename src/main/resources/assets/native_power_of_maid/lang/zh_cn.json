@@ -46,7 +46,7 @@
   "item.native_power_of_maid.soul_of_exp": "女仆之魂 - 经验",
   "item.native_power_of_maid.soul_of_exp.tooltips.1": "使用拔刀剑攻击时，若手中的拔刀剑损坏，女仆会以较快的速度消耗女仆的§e经验值§f回复拔刀剑的耐久；§e好感度§f越高，回复速度越快，§e经验值§f消耗越少",
   "item.native_power_of_maid.soul_of_exp.tooltips.2": "耐久回满时，拔刀剑将回到未损坏状态",
-  "item.native_power_of_maid.soul_of_native_power": "女仆之荣耀 - 真正的力量",
+  "item.native_power_of_maid.soul_of_native_power": "女仆之荣耀 - 原生的力量",
   "item.native_power_of_maid.soul_of_native_power.tooltips.1": "§b§o§lThis is POWER!§r",
   "item.native_power_of_maid.soul_of_native_power.tooltips.2": "§c§o§l蕴含着强大的力量，需要女仆§e§o§l好感度§c§o§l达到3级才能生效§r",
   "item.native_power_of_maid.soul_of_native_power.tooltips.3": "§d可以与其他§e女仆之魂§r§d在铁砧上融合（至多%1$s§r§d次，超出上限后再合成会替换最先合成的女仆之魂）",
@@ -77,5 +77,5 @@
   "task.native_power_of_maid.slashblade_attack.condition.has_slashblade": "主手持有拔刀剑",
   "task.native_power_of_maid.slashblade_attack.condition.souls": "可以在女仆的饰品栏中装备特殊的拔刀剑饰品以解锁更多技能",
   "jei.native_power_of_maid.altar_craft.item_craft.result": "合成物品",
-  "item_group.native_power_of_maid": "TLM：真正的力量"
+  "item_group.native_power_of_maid": "TLM：原生的力量"
 }

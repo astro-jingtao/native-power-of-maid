@@ -11,7 +11,7 @@ public class NativePowerOfMaidClientConfig {
     static {
         ForgeConfigSpec.Builder clientBuilder = new ForgeConfigSpec.Builder();
 
-        clientBuilder.comment("TLM: True POWER client settings");
+        clientBuilder.comment("TLM: Native POWER client settings");
 
         MAID_RANK_SIZE = clientBuilder
                 .comment("Set the size of maid's ranking display. (default: 0.018)")

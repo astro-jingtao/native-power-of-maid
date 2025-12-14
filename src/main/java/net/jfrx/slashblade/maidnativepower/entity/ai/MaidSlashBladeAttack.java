@@ -42,7 +42,7 @@ public class MaidSlashBladeAttack {
     );
 
     /**
-     * 【女仆之荣耀 - 真正的力量】生效时，可以打断发完美次元斩的 Combo
+     * 【女仆之荣耀 - 原生的力量】生效时，可以打断发完美次元斩的 Combo
      */
     public static final Set<ComboState> NATIVE_POWER_CHARGE_COMBO = Set.of(
             ComboStateRegistry.JUDGEMENT_CUT_SLASH.get(),
@@ -114,7 +114,7 @@ public class MaidSlashBladeAttack {
     );
 
     /**
-     * 【女仆之荣耀 - 真正的力量】生效时，不应被打断的 Combo
+     * 【女仆之荣耀 - 原生的力量】生效时，不应被打断的 Combo
      */
     public static final Set<ComboState> NATIVE_POWER_UNINTERRUPTIBLE_COMBO = Set.of(
             ComboStateRegistry.COMBO_C.get(),
