@@ -21,11 +21,11 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Optional;
 
 public class MaidMirageBladeBehavior extends Behavior<EntityMaid> {
-    public static final String BASE_SUMMONED_SWORD_COUNTER_KEY = "nativepowerOfMaid.baseSummonedSwordCounter";
-    public static final String SPIRAL_SWORD_COUNTER_KEY = "nativepowerOfMaid.spiralSwordCounter";
-    public static final String STORM_SWORD_COUNTER_KEY = "nativepowerOfMaid.stormSwordCounter";
-    public static final String BLISTERING_SWORD_COUNTER_KEY = "nativepowerOfMaid.blisteringSwordCounter";
-    public static final String HEAVY_RAIN_SWORD_COUNTER_KEY = "nativepowerOfMaid.heavyRainSwordCounter";
+    public static final String BASE_SUMMONED_SWORD_COUNTER_KEY = "nativePowerOfMaid.baseSummonedSwordCounter";
+    public static final String SPIRAL_SWORD_COUNTER_KEY = "nativePowerOfMaid.spiralSwordCounter";
+    public static final String STORM_SWORD_COUNTER_KEY = "nativePowerOfMaid.stormSwordCounter";
+    public static final String BLISTERING_SWORD_COUNTER_KEY = "nativePowerOfMaid.blisteringSwordCounter";
+    public static final String HEAVY_RAIN_SWORD_COUNTER_KEY = "nativePowerOfMaid.heavyRainSwordCounter";
 
     public MaidMirageBladeBehavior() {
         super(ImmutableMap.of(

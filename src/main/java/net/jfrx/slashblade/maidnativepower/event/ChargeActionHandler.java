@@ -26,7 +26,7 @@ public class ChargeActionHandler {
     }
 
     private static void onChargeAction(SlashBladeEvent.ChargeActionEvent event, EntityMaid maid, ISlashBladeState state) {
-        // TODO: Only check if in 拔刀剑攻击
+        // Only check if in 拔刀剑攻击
         if (maid.getTask().getUid() != TaskSlashBlade.UID){return;}
         if (!SlashBladeMaidBauble.JudgementCut.checkBauble(maid) && !SlashBladeMaidBauble.JustJudgementCut.checkBauble(maid)) {
             event.setCanceled(true);

@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber
 public class DoSlashHandler {
-    public static final String LAST_DO_SLASH_TIME = "nativepowerOfMaid.lastDoSlashTime";
+    public static final String LAST_DO_SLASH_TIME = "nativePowerOfMaid.lastDoSlashTime";
 
     @SubscribeEvent
     public static void onDoSlashEvent(SlashBladeEvent.DoSlashEvent event) {

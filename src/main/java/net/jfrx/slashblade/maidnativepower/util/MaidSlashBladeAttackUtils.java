@@ -15,7 +15,6 @@ import mods.flammpfeil.slashblade.util.AttackManager;
 import mods.flammpfeil.slashblade.util.KnockBacks;
 import net.minecraft.client.Minecraft;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
-//import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -27,7 +26,6 @@ import net.jfrx.slashblade.maidnativepower.entity.ai.MaidSlashBladeAttack;
 import net.jfrx.slashblade.maidnativepower.event.ChargeActionHandler;
 import net.jfrx.slashblade.maidnativepower.event.api.MaidProgressComboEvent;
 import net.jfrx.slashblade.maidnativepower.item.SlashBladeMaidBauble;
-//import net.mrqx.nativepower.registry.NativePowerComboStateRegistry;
 import net.jfrx.slashblade.maidnativepower.util.JustSlashArtManager;
 import org.apache.commons.lang3.function.TriFunction;
 import org.apache.logging.log4j.util.TriConsumer;
@@ -37,8 +35,8 @@ import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 
 public class MaidSlashBladeAttackUtils {
-    public static final String VOID_SLASH_COUNTER_KEY = "nativepowerOfMaid.voidSlashCounter";
-    public static final String SUPER_JUDGEMENT_CUT_COUNTER_KEY = "nativepowerOfMaid.superJudgementCutCounter";
+    public static final String VOID_SLASH_COUNTER_KEY = "nativePowerOfMaid.voidSlashCounter";
+    public static final String SUPER_JUDGEMENT_CUT_COUNTER_KEY = "nativePowerOfMaid.superJudgementCutCounter";
 
     public static final BiFunction<EntityMaid, ISlashBladeState, Boolean> TRY_AERIAL_CLEAVE = MaidSlashBladeAttackUtils::tryAerialCleave;
     public static final BiConsumer<EntityMaid, ISlashBladeState> GROUND_ATTACK = MaidSlashBladeAttackUtils::groundAttack;
@@ -46,7 +44,6 @@ public class MaidSlashBladeAttackUtils {
     public static final TriConsumer<EntityMaid, ISlashBladeState, LivingEntity> RAPID_SLASH_ATTACK = MaidSlashBladeAttackUtils::rapidSlashAttack;
     public static final TriConsumer<EntityMaid, ISlashBladeState, LivingEntity> JUDGEMENT_CUT = MaidSlashBladeAttackUtils::judgementCut;
     public static final TriFunction<EntityMaid, ISlashBladeState, LivingEntity, Boolean> TRY_JUDGEMENT_CUT = MaidSlashBladeAttackUtils::tryJudgementCut;
-//    public static final TriConsumer<EntityMaid, ISlashBladeState, LivingEntity> VOID_SLASH = MaidSlashBladeAttackUtils::voidSlash;
     public static final TriConsumer<EntityMaid, ISlashBladeState, LivingEntity> NORMAL_SLASHBLADE_ATTACK = MaidSlashBladeAttackUtils::normalSlashBladeAttack;
 
     public static boolean isHoldingSlashBlade(Mob mob) {
@@ -164,30 +161,14 @@ public class MaidSlashBladeAttackUtils {
         return false;
     }
 
-//    private static void voidSlash(EntityMaid maid, ISlashBladeState state, LivingEntity target) {
-//        MaidSlashBladeMovementUtils.TRY_TRICK_TO_TARGET.accept(maid, target);
-//        state.updateComboSeq(maid, NativePowerComboStateRegistry.VOID_SLASH.getId());
-//    }
-
     private static void normalSlashBladeAttack(EntityMaid maid, ISlashBladeState state, LivingEntity target) {
         ResourceLocation currentLoc = state.resolvCurrentComboState(maid);
         ComboState current = ComboStateRegistry.REGISTRY.get().getValue(currentLoc);
-//        CompoundTag data = maid.getPersistentData();
         maid.lookAt(EntityAnchorArgument.Anchor.FEET, target.position());
         if (current != null) {
             ResourceLocation nextLoc = current.getNext(maid);
             if (currentLoc.equals(ComboStateRegistry.NONE.getId()) || nextLoc.equals(ComboStateRegistry.NONE.getId())) {
                 JustSlashArtManager.resetJustCount(maid);
-//                if (SlashBladeMaidBauble.VoidSlash.checkBauble(maid) && data.getInt(VOID_SLASH_COUNTER_KEY) <= 0) {
-//                    VOID_SLASH.accept(maid, state, target);
-//                    data.putInt(VOID_SLASH_COUNTER_KEY, 1000);
-//                } else {
-//                    if (SlashBladeMaidBauble.AirCombo.checkBauble(maid)) {
-//                        AIR_ATTACK.accept(maid, state);
-//                    } else {
-//                        GROUND_ATTACK.accept(maid, state);
-//                    }
-//                }
                 if (SlashBladeMaidBauble.AirCombo.checkBauble(maid)) {
                     AIR_ATTACK.accept(maid, state);
                 } else {

@@ -26,13 +26,13 @@ import org.jetbrains.annotations.NotNull;
 
 @Mod.EventBusSubscriber
 public class MaidGuardHandler {
-    public static final String GUARD_DAMAGE_COUNTER = "nativepowerOfMaid.guardDamageCounter";
-    public static final String GUARD_TOTAL_DAMAGE_COUNTER = "nativepowerOfMaid.guardTotalDamageCounter";
-    public static final String GUARD_ESCAPE_COUNTER = "nativepowerOfMaid.guardEscapeCounter";
-    public static final String PRE_ESCAPE_COUNTER = "nativepowerOfMaid.preEscapeCounter";
-    public static final String GUARD_COOL_DOWN = "nativepowerOfMaid.guardCooldown";
-    public static final String IS_PRE_ESCAPING = "nativepowerOfMaid.isPreEscaping";
-    public static final String GUARD_DAMAGE = "nativepowerOfMaid.guardDamage";
+    public static final String GUARD_DAMAGE_COUNTER = "nativePowerOfMaid.guardDamageCounter";
+    public static final String GUARD_TOTAL_DAMAGE_COUNTER = "nativePowerOfMaid.guardTotalDamageCounter";
+    public static final String GUARD_ESCAPE_COUNTER = "nativePowerOfMaid.guardEscapeCounter";
+    public static final String PRE_ESCAPE_COUNTER = "nativePowerOfMaid.preEscapeCounter";
+    public static final String GUARD_COOL_DOWN = "nativePowerOfMaid.guardCooldown";
+    public static final String IS_PRE_ESCAPING = "nativePowerOfMaid.isPreEscaping";
+    public static final String GUARD_DAMAGE = "nativePowerOfMaid.guardDamage";
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void onLivingAttackEvent(LivingAttackEvent event) {

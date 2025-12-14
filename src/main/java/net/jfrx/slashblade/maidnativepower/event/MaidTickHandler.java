@@ -44,7 +44,7 @@ import java.util.UUID;
 
 @Mod.EventBusSubscriber
 public class MaidTickHandler {
-    public static final String NATIVE_POWER_RANK = "nativepowerOfMaid.nativepowerRank";
+    public static final String NATIVE_POWER_RANK = "nativePowerOfMaid.nativepowerRank";
 
     @SubscribeEvent
     public static void onMaidTickEvent(MaidTickEvent event) {

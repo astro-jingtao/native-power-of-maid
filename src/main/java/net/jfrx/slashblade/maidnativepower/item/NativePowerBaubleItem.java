@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class NativePowerBaubleItem extends SlashBladeMaidBaubleItem {
-    public static final String NATIVE_POWER_SOULS_KEY = NativePowerOfMaid.MODID + "." + "nativepowerSouls";
+    public static final String NATIVE_POWER_SOULS_KEY = NativePowerOfMaid.MODID + "." + "nativePowerSouls";
 
     public NativePowerBaubleItem() {
         super(new Properties().rarity(Rarity.EPIC));

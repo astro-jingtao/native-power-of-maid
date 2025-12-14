@@ -112,7 +112,6 @@ dependencies {
     modImplementation "maven.modrinth:slashblade-resharped:${slash_blade_version}"
     // mrqx`s Slashblade Core
     modImplementation "maven.modrinth:2zhQmVfn:${mrqx_slash_blade_core_version}"
-//    modImplementation "maven.modrinth:true-power:${native_power_version}"
 
     // Touhou Little Maid
     modImplementation "maven.modrinth:touhou-little-maid:${maid_version}-forge+mc${minecraft_version}"
@@ -159,8 +158,6 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             slash_blade_version_range          : slash_blade_version_range,
             mrqx_slash_blade_core_version      : mrqx_slash_blade_core_version,
             mrqx_slash_blade_core_version_range: mrqx_slash_blade_core_version_range,
-//            native_power_version                 : native_power_version,
-//            native_power_version_range           : native_power_version_range,
             maid_version                       : maid_version,
             maid_version_range                 : maid_version_range,
     ]

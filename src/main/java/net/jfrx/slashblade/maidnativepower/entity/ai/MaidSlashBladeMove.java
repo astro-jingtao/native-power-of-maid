@@ -25,7 +25,7 @@ import java.util.Optional;
 import java.util.function.Function;
 
 public class MaidSlashBladeMove {
-    public static final String TRICK_COOL_DOWN = "nativepowerOfMaid.trickCooldown";
+    public static final String TRICK_COOL_DOWN = "nativePowerOfMaid.trickCooldown";
 
     public static BehaviorControl<Mob> create(Function<LivingEntity, Float> speedModifier) {
         return BehaviorBuilder.create(instance ->

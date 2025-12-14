@@ -19,7 +19,6 @@ import net.minecraft.world.entity.ai.memory.NearestVisibleLivingEntities;
 import net.jfrx.slashblade.maidnativepower.event.MaidGuardHandler;
 import net.jfrx.slashblade.maidnativepower.item.SlashBladeMaidBauble;
 import net.jfrx.slashblade.maidnativepower.util.MaidSlashBladeAttackUtils;
-//import net.mrqx.nativepower.registry.NativePowerComboStateRegistry;
 
 // VOID_SLASH_SHEATH 应该就是【虚无刀界】
 
@@ -42,7 +41,6 @@ public class MaidSlashBladeAttack {
             ComboStateRegistry.AERIAL_CLEAVE_LANDING.get(),
             ComboStateRegistry.RAPID_SLASH_END.get(),
             ComboStateRegistry.RISING_STAR.get()
-//            NativePowerComboStateRegistry.VOID_SLASH_SHEATH.get()
     );
 
     /**
@@ -81,7 +79,6 @@ public class MaidSlashBladeAttack {
             ComboStateRegistry.RAPID_SLASH_QUICK.get(),
             ComboStateRegistry.RAPID_SLASH_END2.get(),
             ComboStateRegistry.RISING_STAR_END.get(),
-//            NativePowerComboStateRegistry.VOID_SLASH_SHEATH.get(),
             ComboStateRegistry.JUDGEMENT_CUT_SHEATH.get(),
             ComboStateRegistry.JUDGEMENT_CUT_SHEATH_AIR.get(),
             ComboStateRegistry.JUDGEMENT_CUT_SHEATH_JUST.get()
@@ -116,7 +113,6 @@ public class MaidSlashBladeAttack {
             ComboStateRegistry.JUDGEMENT_CUT_SLASH_JUST.get(),
             ComboStateRegistry.JUDGEMENT_CUT_SLASH_JUST2.get(),
             ComboStateRegistry.JUDGEMENT_CUT_END.get()
-//            NativePowerComboStateRegistry.VOID_SLASH.get()
     );
 
     /**
@@ -134,7 +130,6 @@ public class MaidSlashBladeAttack {
             ComboStateRegistry.RISING_STAR.get(),
             ComboStateRegistry.JUDGEMENT_CUT.get(),
             ComboStateRegistry.JUDGEMENT_CUT_END.get()
-//            NativePowerComboStateRegistry.VOID_SLASH.get()
     );
 
     public static OneShot<Mob> create() {
