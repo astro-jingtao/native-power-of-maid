@@ -120,7 +120,7 @@ dependencies {
     // For test
     modLocalRuntime "maven.modrinth:moonlight:1.20-2.16.1-forge"
     modLocalRuntime "maven.modrinth:mmmmmmmmmmmm:1.20-2.0.9"
-    modLocalRuntime "maven.modrinth:touhou-little-maid-spell:1.6.1.2-forge+mc1.20.1"
+//    modLocalRuntime "maven.modrinth:touhou-little-maid-spell:1.6.1.2-forge+mc1.20.1"
 
     implementation "org.jetbrains:annotations:17.0.0"
 }

@@ -38,7 +38,6 @@ public class NativePowerOfMaidCommonConfig {
                                 List.of("native_power_of_maid:soul_of_trick", 1.0),
                                 List.of("native_power_of_maid:soul_of_judgement_cut", 1.0),
                                 List.of("native_power_of_maid:soul_of_just_judgement_cut", 1.0),
-                                List.of("native_power_of_maid:soul_of_void_slash", 1.0),
                                 List.of("native_power_of_maid:soul_of_guard", 1.0),
                                 List.of("native_power_of_maid:soul_of_health", 1.0),
                                 List.of("native_power_of_maid:soul_of_exp", 1.0),

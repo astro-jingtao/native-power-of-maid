@@ -20,8 +20,6 @@ import net.jfrx.slashblade.maidnativepower.event.MaidGuardHandler;
 import net.jfrx.slashblade.maidnativepower.item.SlashBladeMaidBauble;
 import net.jfrx.slashblade.maidnativepower.util.MaidSlashBladeAttackUtils;
 
-// VOID_SLASH_SHEATH 应该就是【虚无刀界】
-
 import java.util.Set;
 
 public class MaidSlashBladeAttack {

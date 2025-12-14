@@ -25,7 +25,6 @@ public class MaidPowerCreativeTab {
                 output.accept(MaidPowerItems.SOUL_OF_POWER.get());
                 output.accept(MaidPowerItems.SOUL_OF_JUDGEMENT_CUT.get());
                 output.accept(MaidPowerItems.SOUL_OF_JUST_JUDGEMENT_CUT.get());
-                output.accept(MaidPowerItems.SOUL_OF_VOID_SLASH.get());
                 output.accept(MaidPowerItems.SOUL_OF_GUARD.get());
                 output.accept(MaidPowerItems.SOUL_OF_HEALTH.get());
                 output.accept(MaidPowerItems.SOUL_OF_EXP.get());

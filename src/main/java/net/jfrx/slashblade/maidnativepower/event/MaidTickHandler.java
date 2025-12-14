@@ -203,8 +203,6 @@ public class MaidTickHandler {
                 Math.max(0, data.getInt(MaidMirageBladeBehavior.STORM_SWORD_COUNTER_KEY) - decrement));
         data.putInt(MaidMirageBladeBehavior.BASE_SUMMONED_SWORD_COUNTER_KEY,
                 Math.max(0, data.getInt(MaidMirageBladeBehavior.BASE_SUMMONED_SWORD_COUNTER_KEY) - decrement));
-        data.putInt(MaidSlashBladeAttackUtils.VOID_SLASH_COUNTER_KEY,
-                Math.max(0, data.getInt(MaidSlashBladeAttackUtils.VOID_SLASH_COUNTER_KEY) - decrement));
         data.putInt(MaidSlashBladeAttackUtils.SUPER_JUDGEMENT_CUT_COUNTER_KEY,
                 Math.max(0, data.getInt(MaidSlashBladeAttackUtils.SUPER_JUDGEMENT_CUT_COUNTER_KEY) - decrement));
 

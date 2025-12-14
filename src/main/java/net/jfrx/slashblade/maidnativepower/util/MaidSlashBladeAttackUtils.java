@@ -35,7 +35,6 @@ import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 
 public class MaidSlashBladeAttackUtils {
-    public static final String VOID_SLASH_COUNTER_KEY = "nativePowerOfMaid.voidSlashCounter";
     public static final String SUPER_JUDGEMENT_CUT_COUNTER_KEY = "nativePowerOfMaid.superJudgementCutCounter";
 
     public static final BiFunction<EntityMaid, ISlashBladeState, Boolean> TRY_AERIAL_CLEAVE = MaidSlashBladeAttackUtils::tryAerialCleave;

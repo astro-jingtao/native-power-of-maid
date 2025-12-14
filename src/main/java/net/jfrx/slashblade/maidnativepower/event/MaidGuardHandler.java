@@ -131,7 +131,6 @@ public class MaidGuardHandler {
         data.putInt(MaidMirageBladeBehavior.SPIRAL_SWORD_COUNTER_KEY, 0);
         data.putInt(MaidMirageBladeBehavior.STORM_SWORD_COUNTER_KEY, 0);
         data.putInt(MaidMirageBladeBehavior.BASE_SUMMONED_SWORD_COUNTER_KEY, 0);
-        data.putInt(MaidSlashBladeAttackUtils.VOID_SLASH_COUNTER_KEY, 0);
         data.putInt(MaidSlashBladeAttackUtils.SUPER_JUDGEMENT_CUT_COUNTER_KEY, 0);
 
         data.putInt(MaidSlashBladeMove.TRICK_COOL_DOWN, 0);

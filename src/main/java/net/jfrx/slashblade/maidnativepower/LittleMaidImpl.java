@@ -30,7 +30,6 @@ public class LittleMaidImpl implements ILittleMaid {
     public static final SlashBladeMaidBauble.Power POWER_BAUBLE = new SlashBladeMaidBauble.Power();
     public static final SlashBladeMaidBauble.JudgementCut JUDGEMENT_CUT_BAUBLE = new SlashBladeMaidBauble.JudgementCut();
     public static final SlashBladeMaidBauble.JustJudgementCut JUST_JUDGEMENT_CUT_BAUBLE = new SlashBladeMaidBauble.JustJudgementCut();
-    public static final SlashBladeMaidBauble.VoidSlash VOID_SLASH_BAUBLE = new SlashBladeMaidBauble.VoidSlash();
     public static final SlashBladeMaidBauble.Guard GUARD_BAUBLE = new SlashBladeMaidBauble.Guard();
     public static final SlashBladeMaidBauble.Health HEALTH_BAUBLE = new SlashBladeMaidBauble.Health();
     public static final SlashBladeMaidBauble.Exp EXP_BAUBLE = new SlashBladeMaidBauble.Exp();
@@ -53,7 +52,6 @@ public class LittleMaidImpl implements ILittleMaid {
         manager.bind(MaidPowerItems.SOUL_OF_POWER.get(), POWER_BAUBLE);
         manager.bind(MaidPowerItems.SOUL_OF_JUDGEMENT_CUT.get(), JUDGEMENT_CUT_BAUBLE);
         manager.bind(MaidPowerItems.SOUL_OF_JUST_JUDGEMENT_CUT.get(), JUST_JUDGEMENT_CUT_BAUBLE);
-        manager.bind(MaidPowerItems.SOUL_OF_VOID_SLASH.get(), VOID_SLASH_BAUBLE);
         manager.bind(MaidPowerItems.SOUL_OF_GUARD.get(), GUARD_BAUBLE);
         manager.bind(MaidPowerItems.SOUL_OF_HEALTH.get(), HEALTH_BAUBLE);
         manager.bind(MaidPowerItems.SOUL_OF_EXP.get(), EXP_BAUBLE);

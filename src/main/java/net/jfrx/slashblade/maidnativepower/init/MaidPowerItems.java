@@ -22,7 +22,6 @@ public class MaidPowerItems {
     public static final RegistryObject<Item> SOUL_OF_POWER = ITEMS.register("soul_of_power", () -> new SlashBladeMaidBaubleItem(new Item.Properties().rarity(Rarity.RARE)));
     public static final RegistryObject<Item> SOUL_OF_JUDGEMENT_CUT = ITEMS.register("soul_of_judgement_cut", () -> new SlashBladeMaidBaubleItem(new Item.Properties().rarity(Rarity.RARE)));
     public static final RegistryObject<Item> SOUL_OF_JUST_JUDGEMENT_CUT = ITEMS.register("soul_of_just_judgement_cut", () -> new SlashBladeMaidBaubleItem(new Item.Properties().rarity(Rarity.RARE)));
-    public static final RegistryObject<Item> SOUL_OF_VOID_SLASH = ITEMS.register("soul_of_void_slash", () -> new SlashBladeMaidBaubleItem(new Item.Properties().rarity(Rarity.RARE)));
     public static final RegistryObject<Item> SOUL_OF_GUARD = ITEMS.register("soul_of_guard", () -> new SlashBladeMaidBaubleItem(new Item.Properties().rarity(Rarity.RARE)));
     public static final RegistryObject<Item> SOUL_OF_HEALTH = ITEMS.register("soul_of_health", () -> new SlashBladeMaidBaubleItem(new Item.Properties().rarity(Rarity.RARE)));
     public static final RegistryObject<Item> SOUL_OF_EXP = ITEMS.register("soul_of_exp", () -> new SlashBladeMaidBaubleItem(new Item.Properties().rarity(Rarity.RARE)));
