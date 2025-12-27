@@ -189,10 +189,11 @@ public class MaidTickHandler {
 
     public static void maidTickCounter(EntityMaid maid, boolean hasNativePower) {
         CompoundTag data = maid.getPersistentData();
-        int nativepower = hasNativePower ? 2 : 1;
+        int nativePower = hasNativePower ? 2 : 1;
         int favorabilityLevel = maid.getFavorabilityManager().getLevel() + 1;
-        int decrement = favorabilityLevel * nativepower;
+        int decrement = favorabilityLevel * nativePower;
 
+        // 随好感度加快的冷却
         data.putInt(MaidMirageBladeBehavior.HEAVY_RAIN_SWORD_COUNTER_KEY,
                 Math.max(0, data.getInt(MaidMirageBladeBehavior.HEAVY_RAIN_SWORD_COUNTER_KEY) - decrement));
         data.putInt(MaidMirageBladeBehavior.BLISTERING_SWORD_COUNTER_KEY,
@@ -206,16 +207,17 @@ public class MaidTickHandler {
         data.putInt(MaidSlashBladeAttackUtils.SUPER_JUDGEMENT_CUT_COUNTER_KEY,
                 Math.max(0, data.getInt(MaidSlashBladeAttackUtils.SUPER_JUDGEMENT_CUT_COUNTER_KEY) - decrement));
 
+        // 不随好感度加快的冷却
         data.putInt(MaidSlashBladeMove.TRICK_COOL_DOWN,
-                Math.max(0, data.getInt(MaidSlashBladeMove.TRICK_COOL_DOWN) - nativepower));
+                Math.max(0, data.getInt(MaidSlashBladeMove.TRICK_COOL_DOWN) - nativePower));
         data.putInt(MaidGuardHandler.GUARD_DAMAGE_COUNTER,
-                Math.max(0, data.getInt(MaidGuardHandler.GUARD_DAMAGE_COUNTER) - nativepower));
+                Math.max(0, data.getInt(MaidGuardHandler.GUARD_DAMAGE_COUNTER) - nativePower));
         data.putInt(MaidGuardHandler.GUARD_ESCAPE_COUNTER,
-                Math.max(0, data.getInt(MaidGuardHandler.GUARD_ESCAPE_COUNTER) - nativepower));
+                Math.max(0, data.getInt(MaidGuardHandler.GUARD_ESCAPE_COUNTER) - nativePower));
         data.putInt(MaidGuardHandler.PRE_ESCAPE_COUNTER,
-                Math.max(0, data.getInt(MaidGuardHandler.PRE_ESCAPE_COUNTER) - nativepower));
+                Math.max(0, data.getInt(MaidGuardHandler.PRE_ESCAPE_COUNTER) - nativePower));
         data.putInt(MaidGuardHandler.GUARD_COOL_DOWN,
-                Math.max(0, data.getInt(MaidGuardHandler.GUARD_COOL_DOWN) - nativepower));
+                Math.max(0, data.getInt(MaidGuardHandler.GUARD_COOL_DOWN) - nativePower));
 
         if (!data.contains(NATIVE_POWER_RANK)) {
             data.putLong(NATIVE_POWER_RANK, 2300);
@@ -224,7 +226,7 @@ public class MaidTickHandler {
 
         long cooldown = JustSlashArtManager.getJustCooldown(maid);
         if (cooldown > 0) {
-            cooldown -= nativepower;
+            cooldown -= nativePower;
             JustSlashArtManager.setJustCooldown(maid, cooldown);
             if (cooldown == 0) {
                 JustSlashArtManager.resetJustCount(maid);

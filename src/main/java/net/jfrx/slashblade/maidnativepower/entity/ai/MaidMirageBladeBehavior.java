@@ -55,20 +55,20 @@ public class MaidMirageBladeBehavior extends Behavior<EntityMaid> {
     @Override
     public void tick(@NotNull ServerLevel level, @NotNull EntityMaid maid, long gameTime) {
         LivingEntity target = maid.getBrain().getMemory(MemoryModuleType.ATTACK_TARGET).orElse(null);
-        boolean nativepower = SlashBladeMaidBauble.NativePower.checkBauble(maid);
+        boolean nativePower = SlashBladeMaidBauble.NativePower.checkBauble(maid);
         if (target == null) {
             return;
         }
         if (!maid.getMainHandItem().getCapability(ItemSlashBlade.BLADESTATE).isPresent()) {
             return;
         }
-        if (MaidGuardHandler.isGuarding(maid) && !nativepower) {
+        if (MaidGuardHandler.isGuarding(maid) && !nativePower) {
             return;
         }
 
         int favorLevel = maid.getFavorabilityManager().getLevel();
         int enchantPower = maid.getMainHandItem().getEnchantmentLevel(Enchantments.POWER_ARROWS);
-        int powerLevel = (enchantPower + favorLevel + 1) * (nativepower ? 2 : 1);
+        int powerLevel = (enchantPower + favorLevel + 1) * (nativePower ? 2 : 1);
         CompoundTag data = maid.getPersistentData();
 
         switch (favorLevel) {

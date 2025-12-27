@@ -160,12 +160,6 @@ public class SlashBladeMaidBauble implements IMaidBauble {
         }
     }
 
-    public static class VoidSlash extends SlashBladeMaidBauble {
-        public static boolean checkBauble(EntityMaid maid) {
-            return SlashBladeMaidBauble.getBaubleCountForClass(maid, VoidSlash.class) > 0;
-        }
-    }
-
     public static class Guard extends SlashBladeMaidBauble {
         public static boolean checkBauble(EntityMaid maid) {
             return SlashBladeMaidBauble.getBaubleCountForClass(maid, Guard.class) > 0;
@@ -227,15 +221,16 @@ public class SlashBladeMaidBauble implements IMaidBauble {
         BaubleItemHandler handler = maid.getMaidBauble();
 
         AtomicInteger count = new AtomicInteger(0);
-        AtomicBoolean nativepowerFlag = new AtomicBoolean(false);
+        AtomicBoolean nativePowerFlag = new AtomicBoolean(false);
         for (int i = 0; i < handler.getSlots(); ++i) {
             IMaidBauble baubleIn = handler.getBaubleInSlot(i);
             if (clazz.isInstance(baubleIn)) {
                 count.getAndIncrement();
             }
-            if (baubleIn instanceof NativePower && !nativepowerFlag.get()) {
+            // 【女仆之荣耀 - 原生的力量】特殊处理
+            if (baubleIn instanceof NativePower && !nativePowerFlag.get()) {
                 count.set(0);
-                nativepowerFlag.set(true);
+                nativePowerFlag.set(true);
                 ItemStack itemStack = handler.getStackInSlot(i);
                 NativePowerBaubleItem.getSouls(itemStack).forEach(itemStack1 -> {
                     if (clazz.isInstance(BaubleManager.getBauble(itemStack1))) {

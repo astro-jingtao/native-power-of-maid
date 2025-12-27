@@ -158,29 +158,34 @@ public class MaidSlashBladeAttack {
             return false;
         }
         NearestVisibleLivingEntities visibleEntities = instance.get(visibleEntitiesAccessor);
-        boolean nativepower = SlashBladeMaidBauble.NativePower.checkBauble(maid);
+        boolean nativePower = SlashBladeMaidBauble.NativePower.checkBauble(maid);
         if (!visibleEntities.contains(target)) {
             return false;
         }
-        if (MaidGuardHandler.isGuarding(maid) && !nativepower) {
+        if (MaidGuardHandler.isGuarding(maid) && !nativePower) {
             return false;
         }
 
         maid.getMainHandItem().getCapability(ItemSlashBlade.BLADESTATE).ifPresent(state -> {
             state.setTargetEntityId(maid.getTarget());
+            // 近战能打到
             if (maid.distanceTo(target) <= TargetSelector.getResolvedReach(maid)) {
                 lookTargetAccessor.set(new EntityTracker(target, true));
                 if (MaidSlashBladeAttackUtils.TRY_JUDGEMENT_CUT.apply(maid, state, target)) {
                     return;
                 }
                 MaidSlashBladeAttackUtils.NORMAL_SLASHBLADE_ATTACK.accept(maid, state, target);
+            // 近战打不到
             } else {
+                // 在空中且比目标高 5 格以上
                 if (!maid.onGround() && maid.getY() - target.getY() > 5) {
                     MaidSlashBladeAttackUtils.TRY_AERIAL_CLEAVE.apply(maid, state);
                 }
+                // 有【疾走居合】，且当前 Combo 可打断，且不在坐下的状态
                 if (SlashBladeMaidBauble.RapidSlash.checkBauble(maid) && MaidSlashBladeAttackUtils.canInterruptCombo(maid) && !maid.isMaidInSittingPose()) {
                     lookTargetAccessor.set(new EntityTracker(target, true));
                     MaidSlashBladeAttackUtils.RAPID_SLASH_ATTACK.accept(maid, state, target);
+                // 如果有【裂空审判】或【裂空审判 EX】再尝试一次【次元斩】
                 } else if (SlashBladeMaidBauble.JudgementCut.checkBauble(maid)) {
                     lookTargetAccessor.set(new EntityTracker(target, true));
                     MaidSlashBladeAttackUtils.TRY_JUDGEMENT_CUT.apply(maid, state, target);
