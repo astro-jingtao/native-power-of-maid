@@ -36,6 +36,7 @@ import org.joml.Matrix4f;
 import java.io.IOException;
 import java.util.Objects;
 
+@SuppressWarnings("removal")
 public class GeoLayerMaidBladeRenderer<T extends Mob, R extends IGeoEntityRenderer<T>> extends GeoLayerRenderer<T, R> {
     private static final ResourceLocation CREEPER_ARMOR = new ResourceLocation("textures/entity/creeper/creeper_armor.png");
 

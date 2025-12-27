@@ -19,6 +19,7 @@ import net.jfrx.slashblade.maidnativepower.task.TaskSlashBlade;
 import org.joml.Matrix4f;
 import org.lwjgl.opengl.GL11;
 
+@SuppressWarnings("removal")
 @Mod.EventBusSubscriber(Dist.CLIENT)
 public class MaidRankRenderer {
     public static final ResourceLocation RANK_IMG = new ResourceLocation("slashblade", "textures/gui/rank.png");

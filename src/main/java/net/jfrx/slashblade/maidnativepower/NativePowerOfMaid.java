@@ -19,6 +19,7 @@ public class NativePowerOfMaid {
     public static final String MODID = "native_power_of_maid";
     public static final Logger LOGGER = LogUtils.getLogger();
 
+    @SuppressWarnings("removal")
     public NativePowerOfMaid() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         MaidPowerItems.ITEMS.register(modEventBus);
@@ -29,6 +30,7 @@ public class NativePowerOfMaid {
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, NativePowerOfMaidClientConfig.CLIENT_CONFIG);
     }
 
+    @SuppressWarnings("removal")
     public static ResourceLocation prefix(String path) {
         return new ResourceLocation(MODID, path);
     }

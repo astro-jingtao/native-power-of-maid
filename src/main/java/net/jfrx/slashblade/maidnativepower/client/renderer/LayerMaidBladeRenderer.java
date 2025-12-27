@@ -40,6 +40,7 @@ public class LayerMaidBladeRenderer<T extends Mob, M extends EntityModel<T>> ext
     }
 
     @Override
+    @SuppressWarnings("removal")
     public void render(@NotNull PoseStack matrixStack, @NotNull MultiBufferSource bufferIn, int lightIn, @NotNull T entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
         this.renderOffhandItem(matrixStack, bufferIn, lightIn, entity);
         float yOffset = 1.5F;

@@ -9,6 +9,7 @@ public class NetworkManager {
 
     private static final String PROTOCOL_VERSION = "1";
 
+    @SuppressWarnings("removal")
     public static final SimpleChannel INSTANCE = NetworkRegistry.newSimpleChannel(
             new ResourceLocation(NativePowerOfMaid.MODID, "main"), () -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
 

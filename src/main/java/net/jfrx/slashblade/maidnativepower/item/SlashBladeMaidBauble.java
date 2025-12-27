@@ -24,6 +24,7 @@ import net.jfrx.slashblade.maidnativepower.event.api.MaidProgressComboEvent;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
+@SuppressWarnings("removal")
 public class SlashBladeMaidBauble implements IMaidBauble {
     @Mod.EventBusSubscriber
     public static class UnawakenedSoul extends SlashBladeMaidBauble {
