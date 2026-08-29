@@ -89,6 +89,12 @@ legacyForge {
 
             systemProperty 'forge.logging.console.level', 'debug'
             systemProperty 'mixin.debug.export', 'true'
+
+            // Makes FMLEnvironment.production true in dev runs, skipping Forge's dev-only
+            // config check. touhou-little-maid-spell 1.8.x trips that check: its onLoad
+            // reads COMMON config values while only the CLIENT config has been loaded,
+            // which throws in dev but is silently ignored in production.
+//            systemProperty 'production', 'true'
         }
     }
 
@@ -120,7 +126,7 @@ dependencies {
     // For test
     modLocalRuntime "maven.modrinth:moonlight:1.20-2.16.1-forge"
     modLocalRuntime "maven.modrinth:mmmmmmmmmmmm:1.20-2.0.9"
-//    modLocalRuntime "maven.modrinth:touhou-little-maid-spell:1.6.1.2-forge+mc1.20.1"
+//    modLocalRuntime "maven.modrinth:touhou-little-maid-spell:1.8.2-forge+mc1.20.1"
 
     implementation "org.jetbrains:annotations:17.0.0"
 }

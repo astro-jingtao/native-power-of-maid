@@ -18,14 +18,14 @@ import net.jfrx.slashblade.maidnativepower.util.JustSlashArtManager;
 @Mod.EventBusSubscriber
 public class ChargeActionHandler {
     @SubscribeEvent
-    public static void onChargeActionEvent(SlashBladeEvent.ChargeActionEvent event) {
+    public static void onPerformSlashArtEvent(SlashBladeEvent.PerformSlashArtEvent event) {
         if (event.getEntityLiving() instanceof EntityMaid maid) {
             maid.getMainHandItem().getCapability(ItemSlashBlade.BLADESTATE)
-                    .ifPresent(state -> onChargeAction(event, maid, state));
+                    .ifPresent(state -> onPerformSlashArt(event, maid, state));
         }
     }
 
-    private static void onChargeAction(SlashBladeEvent.ChargeActionEvent event, EntityMaid maid, ISlashBladeState state) {
+    private static void onPerformSlashArt(SlashBladeEvent.PerformSlashArtEvent event, EntityMaid maid, ISlashBladeState state) {
         // Only check if in 拔刀剑攻击
         if (maid.getTask().getUid() != TaskSlashBlade.UID){return;}
         if (!SlashBladeMaidBauble.JudgementCut.checkBauble(maid) && !SlashBladeMaidBauble.JustJudgementCut.checkBauble(maid)) {

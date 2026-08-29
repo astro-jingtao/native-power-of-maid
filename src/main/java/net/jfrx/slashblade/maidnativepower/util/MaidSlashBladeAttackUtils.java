@@ -123,7 +123,7 @@ public class MaidSlashBladeAttackUtils {
                 type = SlashArts.ArtsType.Success;
             }
             ResourceLocation comboLoc = SlashArtsRegistry.JUDGEMENT_CUT.get().doArts(type, maid);
-            SlashBladeEvent.ChargeActionEvent event = new SlashBladeEvent.ChargeActionEvent(maid, elapsed, state, comboLoc, type);
+            SlashBladeEvent.PerformSlashArtEvent event = new SlashBladeEvent.PerformSlashArtEvent(maid, elapsed, state, comboLoc, type);
             MinecraftForge.EVENT_BUS.post(event);
             if (!event.isCanceled()) {
                 comboLoc = event.getComboState();
